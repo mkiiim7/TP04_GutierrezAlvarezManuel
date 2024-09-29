@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public PlayerData playerData;  //playerData.jumpforce   playerData.groundDistance  playerData.jumpTime
     [SerializeField] private LayerMask groundedLayer;
     [SerializeField] Transform feetPos;
+    
 
 
 
