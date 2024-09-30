@@ -15,6 +15,9 @@ public class PlayerData : ScriptableObject
 
     public bool isGrounded = false;
     public bool isJumping = false;
+
+    public float velocityx = 1f;
+    public float velocityy = 1f;
     
    
 }
