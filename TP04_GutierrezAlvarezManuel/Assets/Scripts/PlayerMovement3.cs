@@ -15,6 +15,8 @@ public class PlayerMovement3 : MonoBehaviour
     [SerializeField] private float jumpTime = 0.5f;
     [SerializeField] private float crouchHeight = 0.2f;
 
+    [SerializeField] Animator animator; 
+
 
 
     private void Update()
@@ -24,21 +26,25 @@ public class PlayerMovement3 : MonoBehaviour
 
         if (playerData.isGrounded && Input.GetKeyDown(keyUp))
         {
+            animator.SetTrigger("OnJump");
             playerData.isJumping = true;
             rb.velocity = Vector2.up * playerData.jumpForce;
         }
         if (playerData.isJumping && Input.GetKey(keyUp))
         {
+            
             playerData.isJumping = true;
             if (playerData.jumpTimer < jumpTime)
             {
+                
                 rb.velocity = Vector2.up * playerData.jumpForce;
 
                 playerData.jumpTimer += Time.deltaTime;
             }
             else
             {
-                 playerData.isJumping = false;
+                
+                playerData.isJumping = false;
             }
         }
         if (Input.GetKeyUp(keyUp))
@@ -46,6 +52,8 @@ public class PlayerMovement3 : MonoBehaviour
             playerData.isJumping = false;
 
             playerData.jumpTimer = 0;
+
+            animator.SetTrigger("OnLand");
         }
 
 

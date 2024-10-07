@@ -18,3 +18,5 @@ MonoBehaviour:
   jumpTimer: 0
   isGrounded: 1
   isJumping: 0
+  velocityx: 4
+  velocityy: 1
