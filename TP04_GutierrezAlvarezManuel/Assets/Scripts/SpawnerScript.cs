@@ -5,8 +5,10 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstaclePrefabs;
-    public float obstacleSpwanTime = 2f;
-    private float timeUntilObstacleSpawn;
+    [SerializeField] private float obstacleSpwanTime = 2f;
+    [SerializeField] private float timeUntilObstacleSpawn;
+    [SerializeField] private float obstacleSpeed = 1f;
+
     [SerializeField] public PlayerData playerData;
 
 
@@ -19,7 +21,7 @@ public class SpawnerScript : MonoBehaviour
   
     private void SpawnLoop()
     {
-        timeUntilObstacleSpawn += Time.deltaTime;
+        timeUntilObstacleSpawn += Time.deltaTime*0.1f;
 
         if (timeUntilObstacleSpawn >= obstacleSpwanTime)
         {
@@ -34,7 +36,7 @@ public class SpawnerScript : MonoBehaviour
         GameObject spawnedObstacle = Instantiate(obastacleToSpawn, transform.position, Quaternion.identity);
 
         Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-        obstacleRB.velocity = Vector2.left * playerData.velocityx * Time.deltaTime;
+        obstacleRB.velocity = Vector2.left * obstacleSpeed * playerData.velocityx * Time.deltaTime ;
 
 
     }

@@ -1980,6 +1980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803839544}
   - component: {fileID: 1803839545}
+  - component: {fileID: 1803839546}
   m_Layer: 0
   m_Name: Spawner Picos
   m_TagString: Untagged
@@ -2014,9 +2015,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814d8f39ecdffc44d9695ee6ecd2b0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefabs: []
-  obstacleSpwanTime: 2
-  playerData: {fileID: 0}
+  obstaclePrefabs:
+  - {fileID: 647439422954572320, guid: 9e85f0c26fa50ee40806950be174dff9, type: 3}
+  - {fileID: 8068174706765545101, guid: aff2930362969b84b98f57afb0d41961, type: 3}
+  - {fileID: 2105782342579748239, guid: 04c18788cb01d934d887a77b8aebb4d9, type: 3}
+  obstacleSpwanTime: 1
+  timeUntilObstacleSpawn: 0
+  obstacleSpeed: 1
+  playerData: {fileID: 11400000, guid: 68333c9ded9cb584784938c69cecf77c, type: 2}
+--- !u!50 &1803839546
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803839543}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1993607041
 GameObject:
   m_ObjectHideFlags: 0
