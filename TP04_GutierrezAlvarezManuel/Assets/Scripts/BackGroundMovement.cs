@@ -9,6 +9,8 @@ public class BackGroundMovement : MonoBehaviour
     [SerializeField] float realVelocity = 1;
 
     [SerializeField] float depht = 1f;
+
+   
     void Start()
     {
         
