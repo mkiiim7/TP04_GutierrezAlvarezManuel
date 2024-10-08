@@ -43,6 +43,8 @@ public class SpawnerScript : MonoBehaviour
         Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
         obstacleRB.velocity = Vector2.left * obstacleSpeed * playerData.velocityx * Time.deltaTime ;
 
+        Destroy(spawnedObstacle, 3f);
+
 
     }
 }

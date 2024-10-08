@@ -100,8 +100,8 @@ public class UIMainMENU : MonoBehaviour
     {
 
         PanelSettings.SetActive(true);
-        
-        
+        pausePanel.SetActive(false);
+
 
 
     }
@@ -112,7 +112,8 @@ public class UIMainMENU : MonoBehaviour
     {
         
         PanelSettings.SetActive(false);
-       
+        pausePanel.SetActive(true);
+
 
 
 
