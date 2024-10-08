@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class UIMainMENU : MonoBehaviour
 {
@@ -20,6 +23,11 @@ public class UIMainMENU : MonoBehaviour
 
     [SerializeField] private GameObject PanelSettings;
 
+    [SerializeField] private UnityEngine.UI.Slider VolumenSlider;
+
+    [SerializeField] public AudioSource audioSourcePlay;
+
+
     public bool pausa = false;
 
 
@@ -37,10 +45,13 @@ public class UIMainMENU : MonoBehaviour
 
         settingsBackButton.onClick.AddListener(OnSettingsBackButtonClicked);
 
+        VolumenSlider.onValueChanged.AddListener(OnVolumenChanged);
 
 
 
     }
+
+  
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -117,6 +128,13 @@ public class UIMainMENU : MonoBehaviour
 
 
 
+    }
+
+    private void OnVolumenChanged(float volumen)
+    {
+       audioSourcePlay.volume = volumen;
+
+        
     }
 
 

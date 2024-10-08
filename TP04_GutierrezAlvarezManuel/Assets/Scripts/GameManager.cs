@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] public UIMainMENU uiMainMenu;
 
-
+   
     private void Update()
     {
         if (uiMainMenu.pausa == false)
