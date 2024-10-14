@@ -29,13 +29,8 @@ public class PlayerCollisions : MonoBehaviour
             audioSourceSlow.mute = false;
             gameManager.score += 2;
             Time.timeScale = 0.4f;
-            Invoke("DelayTiempo",2);
-            
+            Invoke("DelayTiempo",2);         
           
-            
-
-
-
         }
     }
     private void DelayTiempo()
