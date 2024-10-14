@@ -18,6 +18,8 @@ public class PlayerCollisions : MonoBehaviour
             audioSourcePlay.mute = true;
             
         }
+
+
         if (other.transform.tag == "Sol")
         {
            
@@ -29,7 +31,7 @@ public class PlayerCollisions : MonoBehaviour
             Time.timeScale = 0.4f;
             Invoke("DelayTiempo",2);
             
-            audioSourcePlay.mute = false;
+          
             
 
 
@@ -40,6 +42,7 @@ public class PlayerCollisions : MonoBehaviour
      {
 
         Time.timeScale = 1f;
-        
+        audioSourcePlay.mute = false;
+        audioSourceSlow.mute = true;
     }
 }
